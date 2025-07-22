@@ -87,8 +87,7 @@ feedback-analyzer/
 
 This model is trained on a small dataset for demonstration only. For production use, retrain the model with a larger and more diverse dataset.
 
-## for any doubt and clarifications 
-## contact me
+## for any doubt and clarifications fell free to contact🚀
 ## contact number - 9871649925
 ## email - nikita17.mishra@gmail.com
 Powered by Civora Nexus and SECT.
