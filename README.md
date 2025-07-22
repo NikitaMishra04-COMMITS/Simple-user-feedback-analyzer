@@ -1,4 +1,3 @@
-# Simple-user-feedback-analyzer
 # 📝 Simple user Feedback Analyzer for website
 
 This web app uses machine learning to classify user feedback as **Positive**, **Negative**, or **Neutral**.
