@@ -1,41 +1,94 @@
 # Simple-user-feedback-analyzer
-Website Feedback Analyzer ✨
+# 📝 Simple user Feedback Analyzer for website
 
-This project delivers a powerful and intuitive feedback analyzer designed to help website owners gather valuable insights from their visitors. It simplifies the process of collecting comprehensive feedback, from initial impressions to detailed suggestions, and provides a mechanism to analyze the submitted data.
+This web app uses machine learning to classify user feedback as **Positive**, **Negative**, or **Neutral**.
 
+---
+
+## 🔍 Model Used
+
+- **Vectorizer:** TF-IDF (`TfidfVectorizer`)
+- **Classifier:** Logistic Regression (`LogisticRegression`)
+- **Library:** scikit-learn
+- **Target Classes:**
+  - `0`: Negative 😡
+  - `1`: Positive 😊
+  - `2`: Neutral 😐
+
+---
+
+## 🧠 Dataset
+
+A small sample dataset with 10 feedback sentences. Each sentence is labeled as either:
+- Positive (1)
+- Negative (0)
+- Neutral (2)
+
+Example:
+
+| Feedback               | Label    |
+|------------------------|----------|
+| "Amazing service"      | Positive |
+| "Terrible support"     | Negative |
+| "It was okay"          | Neutral  |
+
+---
+
+## 📈 Evaluation
+
+- **Algorithm:** Logistic Regression
+- **Vectorization:** TF-IDF
+- **Accuracy:** ~60–100% (varies per run)
+- **Metrics:** Precision, Recall, F1-score via `classification_report`
+- **Confusion Matrix:** Used to verify prediction accuracy per class
+
+---
+
+## 🚀 How to Run
+
+### 1. Clone or Download
+
+```bash
+git clone https://github.com/yourusername/feedback-analyzer.git
+cd feedback-analyzer
+```
+
+### 2. Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the App
+
+```bash
+python app.py
+```
+
+Visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+---
+
+## ✅ Project Structure
+
+```
+feedback-analyzer/
+├── app.py
+├── feedback_model.pkl
+├── requirements.txt
+├── README.md
+└── templates/
+    └── feedback.html
+```
+
+---
+
+## 📌 Disclaimer
+
+This model is trained on a small dataset for demonstration only. For production use, retrain the model with a larger and more diverse dataset.
+
+## for any doubt and clarifications 
+## contact me
+## contact number - 9871649925
+## email - nikita17.mishra@gmail.com
 Powered by Civora Nexus and SECT.
-
-Features
-🚀Intuitive Multi-Step Form: Guides users through a smooth and engaging feedback submission journey.User Identification: Securely collects user's name and email, enabling personalized follow-ups (optional).
-
-Star Rating System: Offers a quick and visual way for users to rate their experience.
-
-Detailed Text Feedback: Provides ample space for users to express their thoughts, suggestions, or concerns in detail.
-
-Feedback Analysis: Includes a smart mechanism to process and analyze the submitted text feedback, helping to extract key insights (e.g., sentiment, common themes).
-
-Responsive Design: Ensures a flawless and consistent user experience across all devices, from mobile phones to desktops.
-
-Modern & Clean UI: Boasts a sleek and visually appealing interface, designed for clarity and ease of use.
-
-Screenshots in the repository 
-📸Here are some glimpses into the feedback submission flow:
-
-Step 1: User InformationUsers kick off the feedback process by entering their name and email.
-
-Step 2: Rating ExperienceA simple star rating allows users to quickly quantify their experience.
-
-Step 3: Detailed Feedback & AnalysisUsers can provide detailed feedback, which is then ready for analysis!
-
-Technologies Used
-💻Frontend: HTML, CSS , JavaScript.
-  Backend: Python (Flask), or similar, for handling feedback submission and analysis.
-  
- Code Readability 
- 📖To ensure the codebase is easy to understand and maintain, I've added extensive comments throughout the files. This makes the logic clear and helps anyone looking at the code to quickly grasp its functionality.
- 
- Contributing 
- 🤝While this project is primarily a demonstration, contributions are always welcome to make it even better!If you have a suggestion that would improve this project.
- 
- Contact 
- 📧Nikita Mishra- nikita17.mishra@gmail.com
