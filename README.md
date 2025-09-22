@@ -16,7 +16,7 @@ This web app uses machine learning to classify user feedback as **Positive**, **
 
 ---
 
-## 🧠 Dataset
+## DATASET
 
 A small sample dataset with 10 feedback sentences. Each sentence is labeled as either:
 - Positive (1)
