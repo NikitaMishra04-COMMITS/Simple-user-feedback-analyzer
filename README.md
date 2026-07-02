@@ -1,92 +1,44 @@
-# 📝 Simple user Feedback Analyzer for website
+# User Feedback Analyzer
 
-This web app uses machine learning to classify user feedback as **Positive**, **Negative**, or **Neutral**.
+A simple Machine Learning project that classifies user feedback as
+**Positive**, **Negative**, or **Neutral** using TF-IDF + Logistic Regression.
 
----
+## Files
 
-## 🔍 Model Used
+| File | What it is |
+|------|------------|
+| `sentiment_analysis.py` | The whole project — load data, train, evaluate, predict |
+| `dataset/feedback.csv` | The labelled feedback data (6,000 rows) |
+| `dataset/generate_dataset.py` | Script that created the sample data (optional) |
+| `sentiment_model.pkl` | The trained model (created when you run the script) |
+| `vectorizer.pkl` | The saved TF-IDF vectorizer |
 
-- **Vectorizer:** TF-IDF (`TfidfVectorizer`)
-- **Classifier:** Logistic Regression (`LogisticRegression`)
-- **Library:** scikit-learn
-- **Target Classes:**
-  - `0`: Negative 😡
-  - `1`: Positive 😊
-  - `2`: Neutral 😐
-
----
-
-## DATASET
-
-A small sample dataset with 10 feedback sentences. Each sentence is labeled as either:
-- Positive (1)
-- Negative (0)
-- Neutral (2)
-
-Example:
-
-| Feedback               | Label    |
-|------------------------|----------|
-| "Amazing service"      | Positive |
-| "Terrible support"     | Negative |
-| "It was okay"          | Neutral  |
-
----
-
-## 📈 Evaluation
-
-- **Algorithm:** Logistic Regression
-- **Vectorization:** TF-IDF
-- **Accuracy:** ~60–100% (varies per run)
-- **Metrics:** Precision, Recall, F1-score via `classification_report`
-- **Confusion Matrix:** Used to verify prediction accuracy per class
-
----
-
-## 🚀 How to Run
-
-### 1. Clone or Download
-
-```bash
-git clone https://github.com/yourusername/feedback-analyzer.git
-cd feedback-analyzer
-```
-
-### 2. Install Requirements
+## How to run
 
 ```bash
 pip install -r requirements.txt
+python sentiment_analysis.py
 ```
 
-### 3. Run the App
+## What it does
 
-```bash
-python app.py
+1. Loads `dataset/feedback.csv`
+2. Cleans the text (lowercase, remove numbers/punctuation/extra spaces)
+3. Splits into 80% training / 20% testing
+4. Turns text into numbers with TF-IDF
+5. Trains a Logistic Regression model
+6. Prints accuracy, classification report, and confusion matrix
+7. Saves the model, then predicts a few example sentences
+
+## Example output
+
+```
+Accuracy: 0.94
+
+I loved the service.               ->  Positive (90.6%)
+The product quality was terrible.  ->  Negative (65.6%)
+This is okay.                      ->  Neutral (89.7%)
 ```
 
-Visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
+Expected accuracy: **~90–94%**.
 
----
-
-## ✅ Project Structure
-
-```
-feedback-analyzer/
-├── app.py
-├── feedback_model.pkl
-├── requirements.txt
-├── README.md
-└── templates/
-    └── feedback.html
-```
-
----
-
-## 📌 Disclaimer
-
-This model is trained on a small dataset for demonstration only. For production use, retrain the model with a larger and more diverse dataset.
-
-for any doubt and clarifications feel free to contact🚀
-## contact number - 9871649925
-## email - nikita17.mishra@gmail.com
-Powered by Civora Nexus and SECT.
